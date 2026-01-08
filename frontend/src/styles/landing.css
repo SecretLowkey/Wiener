@@ -417,9 +417,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .intro-container {
+    padding: 1.5rem;
+  }
+  
   .intro-logo img {
     width: 120px;
     height: 120px;
+  }
+  
+  .intro-bread {
+    font-size: clamp(4rem, 18vw, 10rem);
   }
   
   .hero {
