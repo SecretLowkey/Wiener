@@ -1,0 +1,15 @@
+[build]
+  base = "frontend"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "20"
+  CI = "false"
+  DISABLE_ESLINT_PLUGIN = "true"
+  NPM_FLAGS = "--legacy-peer-deps"
