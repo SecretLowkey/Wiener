@@ -13,6 +13,112 @@
   --border-sketchy: #c9a067;
 }
 
+/* ==================== */
+/* INTRO ANIMATION PAGE */
+/* ==================== */
+
+.intro-container {
+  min-height: 100vh;
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Caveat', cursive;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-question {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 25%;
+}
+
+.intro-question.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-logo {
+  opacity: 0;
+  transform: scale(0.5) rotate(-10deg);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 1.5rem;
+}
+
+.intro-logo.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.intro-logo img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(4px 4px 0px var(--crust-light));
+}
+
+.intro-answer {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.intro-answer.visible {
+  opacity: 1;
+}
+
+.typing-cursor {
+  color: var(--crust-tan);
+  animation: blink 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.intro-bread {
+  font-size: clamp(6rem, 25vw, 16rem);
+  font-weight: 700;
+  color: var(--crust-tan);
+  text-shadow: 4px 4px 0px var(--crust-light);
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: absolute;
+  line-height: 1;
+}
+
+.intro-bread.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.skip-hint {
+  position: absolute;
+  bottom: 2rem;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* ==================== */
+/* MAIN LANDING PAGE    */
+/* ==================== */
+
 /* Base Styles */
 .landing-container {
   min-height: 100vh;
@@ -20,6 +126,19 @@
   color: var(--text-dark);
   font-family: 'Patrick Hand', cursive;
   overflow-x: hidden;
+}
+
+.landing-container.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Main Content */
@@ -282,6 +401,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .intro-logo img {
+    width: 120px;
+    height: 120px;
+  }
+  
   .hero {
     padding: 2rem 1.5rem;
   }

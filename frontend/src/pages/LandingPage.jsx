@@ -1,14 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Copy, Check, ChevronDown } from 'lucide-react';
 
 const LandingPage = () => {
   const [copied, setCopied] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
+  const [introStage, setIntroStage] = useState(0);
+  const [typedText, setTypedText] = useState('');
   
   const CA = '4E8CDFV9DeKVBiUpZo6NwPB7YpyWMWAY3ncgnDqYpump';
   const CHART_URL = 'https://dexscreener.com/solana/4VDSSMDAPdijzULvhT8L1DLrJ1v9N8ZAUincH86PjwnY';
   const BUY_URL = 'https://join.pump.fun/HSag/2j16baja';
   const X_URL = 'https://x.com/i/communities/2009097046159163751';
   const LOGO_URL = 'https://customer-assets.emergentagent.com/job_67754cc0-002f-4257-ba3b-c1a82d72846d/artifacts/c99jcd43_image.png';
+
+  const answerText = "it's just a slice of...";
+
+  // Intro animation sequence
+  useEffect(() => {
+    if (!showIntro) return;
+
+    // Stage 0: Show question "What's this?"
+    const stage1Timer = setTimeout(() => setIntroStage(1), 800);
+    
+    // Stage 1: Show bread logo
+    const stage2Timer = setTimeout(() => setIntroStage(2), 2000);
+    
+    // Stage 2: Start typing answer
+    const stage3Timer = setTimeout(() => setIntroStage(3), 3200);
+    
+    return () => {
+      clearTimeout(stage1Timer);
+      clearTimeout(stage2Timer);
+      clearTimeout(stage3Timer);
+    };
+  }, [showIntro]);
+
+  // Typing effect for answer
+  useEffect(() => {
+    if (introStage !== 3) return;
+    
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= answerText.length) {
+        setTypedText(answerText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+        // Show BREAD after typing completes
+        setTimeout(() => setIntroStage(4), 400);
+      }
+    }, 80);
+    
+    return () => clearInterval(typingInterval);
+  }, [introStage]);
+
+  // Transition to main page after BREAD appears
+  useEffect(() => {
+    if (introStage === 4) {
+      const transitionTimer = setTimeout(() => {
+        setShowIntro(false);
+      }, 2500);
+      return () => clearTimeout(transitionTimer);
+    }
+  }, [introStage]);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(CA);
@@ -20,8 +74,47 @@ const LandingPage = () => {
     document.getElementById('chart-section').scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Skip intro on click
+  const skipIntro = () => {
+    setShowIntro(false);
+  };
+
+  // Intro Screen
+  if (showIntro) {
+    return (
+      <div className="intro-container" onClick={skipIntro}>
+        {/* Question */}
+        <div className={`intro-question ${introStage >= 1 ? 'visible' : ''}`}>
+          what's this?
+        </div>
+
+        {/* Bread Logo */}
+        <div className={`intro-logo ${introStage >= 2 ? 'visible' : ''}`}>
+          <img src={LOGO_URL} alt="Bread" />
+        </div>
+
+        {/* Typed Answer */}
+        <div className={`intro-answer ${introStage >= 3 ? 'visible' : ''}`}>
+          {typedText}
+          <span className="typing-cursor">|</span>
+        </div>
+
+        {/* BREAD Pop Up */}
+        <div className={`intro-bread ${introStage >= 4 ? 'visible' : ''}`}>
+          BREAD
+        </div>
+
+        {/* Skip hint */}
+        <div className="skip-hint">
+          click anywhere to skip
+        </div>
+      </div>
+    );
+  }
+
+  // Main Landing Page
   return (
-    <div className="landing-container">
+    <div className="landing-container fade-in">
       {/* Hero Section */}
       <main className="main-content">
         <section className="hero">
