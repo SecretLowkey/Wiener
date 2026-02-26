@@ -1,16 +1,16 @@
 /* Import handwritten/organic font */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap');
 
-/* CSS Variables - Clean White & Tan Theme */
+/* CSS Variables - Clean White & Green Theme */
 :root {
   --bg-white: #fefefe;
-  --bg-cream: #faf8f5;
+  --bg-cream: #f5faf5;
   --text-dark: #2d2a26;
   --text-muted: #7a7570;
-  --crust-tan: #c9a067;
-  --crust-light: #e8d4b8;
-  --crust-dark: #a67c3d;
-  --border-sketchy: #c9a067;
+  --crust-tan: #54B347;
+  --crust-light: #a8d9a2;
+  --crust-dark: #3d8a34;
+  --border-sketchy: #54B347;
 }
 
 /* ==================== */
