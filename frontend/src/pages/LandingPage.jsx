@@ -7,13 +7,13 @@ const LandingPage = () => {
   const [introStage, setIntroStage] = useState(0);
   const [typedText, setTypedText] = useState('');
   
-  const CA = '4E8CDFV9DeKVBiUpZo6NwPB7YpyWMWAY3ncgnDqYpump';
-  const CHART_URL = 'https://dexscreener.com/solana/4VDSSMDAPdijzULvhT8L1DLrJ1v9N8ZAUincH86PjwnY';
-  const BUY_URL = 'https://join.pump.fun/HSag/2j16baja';
-  const X_URL = 'https://x.com/i/communities/2009097046159163751';
-  const LOGO_URL = 'https://customer-assets.emergentagent.com/job_67754cc0-002f-4257-ba3b-c1a82d72846d/artifacts/c99jcd43_image.png';
+  const CA = 'GvQH1VGGbrjeRSbsCreptYN4GUcZ9w7vMFJ5ic8ypump';
+  const CHART_URL = 'https://dexscreener.com/solana/DSSA7dRkM2gTHxDVfTKwPvpVcqWP1G2gydLXd1twFWWh';
+  const BUY_URL = 'https://pump.fun/coin/GvQH1VGGbrjeRSbsCreptYN4GUcZ9w7vMFJ5ic8ypump';
+  const X_URL = 'https://x.com/i/communities/2024489711939502328';
+  const LOGO_URL = 'https://customer-assets.emergentagent.com/job_6583b0ee-cbd3-4955-a597-92c9cfcc3e14/artifacts/8gh9cgds_image.png';
 
-  const answerText = "it's just a slice of...";
+  const answerText = "it's just a hotdog -";
 
   // Intro animation sequence
   useEffect(() => {
