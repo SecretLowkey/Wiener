@@ -88,9 +88,9 @@ const LandingPage = () => {
           what's this?
         </div>
 
-        {/* Bread Logo */}
+        {/* Wiener Logo */}
         <div className={`intro-logo ${introStage >= 2 ? 'visible' : ''}`}>
-          <img src={LOGO_URL} alt="Bread" />
+          <img src={LOGO_URL} alt="Wiener" />
         </div>
 
         {/* Typed Answer */}
