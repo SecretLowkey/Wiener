@@ -99,9 +99,9 @@ const LandingPage = () => {
           <span className="typing-cursor">|</span>
         </div>
 
-        {/* BREAD Pop Up */}
+        {/* WIENER Pop Up */}
         <div className={`intro-bread ${introStage >= 4 ? 'visible' : ''}`}>
-          BREAD
+          $WIENER
         </div>
 
         {/* Skip hint */}
