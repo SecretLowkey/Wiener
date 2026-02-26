@@ -118,14 +118,17 @@ const LandingPage = () => {
       {/* Hero Section */}
       <main className="main-content">
         <section className="hero">
-          {/* Bread Logo */}
+          {/* Wiener Logo */}
           <div className="bread-logo">
-            <img src={LOGO_URL} alt="Just A Slice Of BREAD" />
+            <img src={LOGO_URL} alt="$WIENER" />
           </div>
           
           {/* Title */}
-          <h1 className="title">just a slice of</h1>
-          <h2 className="ticker-large">BREAD</h2>
+          <h1 className="title">it's just a hotdog</h1>
+          <h2 className="ticker-large">$WIENER</h2>
+          
+          {/* Tagline */}
+          <p className="tagline">$wiener will save the trenches</p>
 
           {/* Buttons Row */}
           <div className="buttons-row">
@@ -133,7 +136,7 @@ const LandingPage = () => {
               className="btn-buy"
               onClick={() => window.open(BUY_URL, '_blank')}
             >
-              buy $bread
+              buy $wiener
             </button>
             
             <button 
