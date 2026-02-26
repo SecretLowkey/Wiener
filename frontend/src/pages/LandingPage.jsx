@@ -171,7 +171,7 @@ const LandingPage = () => {
         <section id="chart-section" className="chart-section">
           <div className="chart-container">
             <iframe
-              src="https://dexscreener.com/solana/4VDSSMDAPdijzULvhT8L1DLrJ1v9N8ZAUincH86PjwnY?embed=1&theme=light&trades=0&info=0"
+              src="https://dexscreener.com/solana/DSSA7dRkM2gTHxDVfTKwPvpVcqWP1G2gydLXd1twFWWh?embed=1&theme=light&trades=0&info=0"
               title="DEXScreener Chart"
               className="chart-iframe"
             />
@@ -182,8 +182,8 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <img src={LOGO_URL} alt="BREAD" className="footer-logo" />
-          <span className="footer-text">$bread</span>
+          <img src={LOGO_URL} alt="WIENER" className="footer-logo" />
+          <span className="footer-text">$wiener</span>
         </div>
       </footer>
     </div>
