@@ -172,10 +172,21 @@ const LandingPage = () => {
         <section id="chart-section" className="chart-section">
           <div className="chart-container">
             <iframe
-              src="https://dexscreener.com/solana/DSSA7dRkM2gTHxDVfTKwPvpVcqWP1G2gydLXd1twFWWh?embed=1&theme=light&trades=0&info=0"
-              title="DEXScreener Chart"
+              src="https://www.geckoterminal.com/solana/pools/DSSA7dRkM2gTHxDVfTKwPvpVcqWP1G2gydLXd1twFWWh?embed=1&info=0&swaps=0"
+              title="wiener / SOL chart"
               className="chart-iframe"
+              allow="clipboard-write"
             />
+          </div>
+          <div className="chart-fallback">
+            <a
+              href={CHART_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="chart-fallback-link"
+            >
+              open on dexscreener ↗
+            </a>
           </div>
         </section>
 
