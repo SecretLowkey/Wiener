@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Copy, Check, ChevronDown } from 'lucide-react';
+import FlappyWienerGame from '../components/FlappyWienerGame';
 
 const LandingPage = () => {
   const [copied, setCopied] = useState(false);
@@ -177,6 +178,9 @@ const LandingPage = () => {
             />
           </div>
         </section>
+
+        {/* Flappy Wiener Game */}
+        <FlappyWienerGame />
       </main>
 
       {/* Footer */}

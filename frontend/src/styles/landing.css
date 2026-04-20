@@ -481,3 +481,101 @@
     height: 350px;
   }
 }
+
+/* ==================== */
+/* FLAPPY WIENER GAME   */
+/* ==================== */
+
+.game-section {
+  width: 100%;
+  padding: 4rem 1.5rem 5rem;
+  background: var(--bg-cream);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.game-inner {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.game-title {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.25rem;
+  line-height: 1.1;
+}
+
+.game-subtitle {
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.game-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.game-stat {
+  text-align: center;
+}
+
+.game-stat-label {
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.game-stat-val {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--crust-tan);
+  line-height: 1;
+}
+
+.game-canvas-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border: 3px solid var(--border-sketchy);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--crust-light);
+  background: #87CEEB;
+}
+
+.game-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.game-hint {
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+@media (max-width: 520px) {
+  .game-section {
+    padding: 3rem 1rem 4rem;
+  }
+  .game-stats {
+    gap: 1.75rem;
+  }
+}
