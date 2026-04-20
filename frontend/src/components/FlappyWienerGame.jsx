@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const WIENER_IMG_URL =
-  'https://customer-assets.emergentagent.com/job_79d1a9c9-deb2-4523-9c6b-38991e45cfba/artifacts/f0q1cs9w_Capture%20d%E2%80%99%C3%A9cran%202026-04-20%20120158-Photoroom.png';
+  'https://customer-assets.emergentagent.com/job_6583b0ee-cbd3-4955-a597-92c9cfcc3e14/artifacts/8gh9cgds_image.png';
 
 const FlappyWienerGame = () => {
   const canvasRef = useRef(null);
