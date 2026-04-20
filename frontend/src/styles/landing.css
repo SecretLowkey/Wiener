@@ -269,25 +269,30 @@
   box-shadow: 2px 2px 0px var(--crust-dark);
 }
 
-.btn-x {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-stake {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.25rem;
+  padding: 0.875rem 2.5rem;
   background-color: var(--bg-white);
-  color: var(--text-dark);
+  color: var(--crust-dark);
   border: 3px solid var(--crust-tan);
-  border-radius: 50%;
+  border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  box-shadow: 3px 3px 0px var(--crust-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  box-shadow: 4px 4px 0px var(--crust-light);
+  text-transform: lowercase;
 }
 
-.btn-x:hover {
+.btn-stake:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px var(--crust-light);
+  box-shadow: 6px 6px 0px var(--crust-light);
   background-color: var(--crust-light);
+  color: var(--text-dark);
+}
+
+.btn-stake:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--crust-light);
 }
 
 /* Contract Address */
@@ -466,6 +471,11 @@
   }
   
   .btn-buy {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .btn-stake {
     width: 100%;
     max-width: 250px;
   }
