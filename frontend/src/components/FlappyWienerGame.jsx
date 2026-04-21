@@ -41,12 +41,12 @@ const FlappyWienerGame = () => {
     const PIPE_W = 70;
     const GAP = 170;
     const PIPE_SPEED = 2.8;
-    const WIENER_W = 90;
-    const WIENER_H = 90;
+    const WIENER_W = 72;
+    const WIENER_H = 72;
     const WIENER_X = 100;
     // Hitbox is smaller than sprite because the wiener is diagonal inside a square image
-    const HITBOX_W = 56;
-    const HITBOX_H = 26;
+    const HITBOX_W = 44;
+    const HITBOX_H = 22;
 
     const reset = () => {
       wy = H / 2;
