@@ -580,6 +580,17 @@
   font-size: 1rem;
   color: var(--text-muted);
   margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.game-hint-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media (max-width: 520px) {

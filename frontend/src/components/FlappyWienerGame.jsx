@@ -321,7 +321,10 @@ const FlappyWienerGame = () => {
           />
         </div>
 
-        <p className="game-hint">🌭 don't touch the pipes — save the trenches</p>
+        <p className="game-hint">
+          <img src={WIENER_IMG_URL} alt="wiener" className="game-hint-icon" />
+          don't touch the pipes — save the trenches
+        </p>
       </div>
     </section>
   );
