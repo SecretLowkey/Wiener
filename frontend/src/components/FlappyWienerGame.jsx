@@ -195,9 +195,6 @@ const FlappyWienerGame = () => {
         ctx.font = "400 22px 'Patrick Hand', sans-serif";
         ctx.fillStyle = '#eee';
         ctx.fillText('click or press space to start', W / 2, H / 2 + 10);
-        if (wienerImg.complete && wienerImg.naturalWidth > 0) {
-          ctx.drawImage(wienerImg, W / 2 - 36, H / 2 + 40, 72, 72);
-        }
       } else if (state === 'dead') {
         ctx.font = "600 34px 'Caveat', cursive";
         ctx.fillText('game over', W / 2, H / 2 - 60);
@@ -322,10 +319,7 @@ const FlappyWienerGame = () => {
           />
         </div>
 
-        <p className="game-hint">
-          <img src={WIENER_IMG_URL} alt="wiener" className="game-hint-icon" />
-          don't touch the pipes — save the trenches
-        </p>
+        <p className="game-hint">don't touch the pipes — save the trenches</p>
       </div>
     </section>
   );
