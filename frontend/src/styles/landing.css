@@ -1302,7 +1302,7 @@
 }
 
 /* ============================ */
-/* GLIZZY RAIN + CUSTOM CURSOR  */
+/* GLIZZY RAIN                  */
 /* ============================ */
 
 .glizzy-rain {
@@ -1331,50 +1331,5 @@
   }
   100% {
     transform: translate3d(var(--drift), 110vh, 0) rotate(var(--rot-end));
-  }
-}
-
-/* Custom cursor */
-.glizzy-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  pointer-events: none;
-  z-index: 99999;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  /* Don't override transform, GlizzyEffects sets it via JS */
-}
-
-.glizzy-cursor.visible {
-  opacity: 1;
-}
-
-.glizzy-cursor img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.25));
-  transform: rotate(-15deg);
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-/* Hide native cursor on desktop only.
-   Use media hover/pointer:fine to avoid touch devices losing accessibility. */
-@media (hover: hover) and (pointer: fine) {
-  html, body {
-    cursor: none;
-  }
-  body * {
-    cursor: none !important;
-  }
-  /* But keep the text-cursor visible on form fields so people can edit */
-  input,
-  textarea,
-  [contenteditable="true"] {
-    cursor: text !important;
   }
 }
