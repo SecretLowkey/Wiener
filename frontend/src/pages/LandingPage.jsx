@@ -185,7 +185,7 @@ const LandingPage = () => {
               rel="noopener noreferrer"
               className="chart-fallback-link"
             >
-              open on dexscreener ↗
+              open on dexscreener ↗︎
             </a>
           </div>
         </section>

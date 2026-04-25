@@ -292,7 +292,7 @@ export default function WienerLeaderboard() {
                 rel="noopener noreferrer"
                 className="lb-link"
               >
-                tibane.net ↗
+                tibane.net ↗︎
               </a>
             </div>
 
@@ -355,7 +355,7 @@ export default function WienerLeaderboard() {
                 rel="noopener noreferrer"
                 className="lb-link-inline"
               >
-                view all members ↗
+                view all members ↗︎
               </a>
             </p>
           </div>
@@ -411,7 +411,7 @@ export default function WienerLeaderboard() {
               <span key={l}>
                 {i > 0 && ' · '}
                 <a href={u} target="_blank" rel="noopener noreferrer">
-                  {l} ↗
+                  {l} ↗︎
                 </a>
               </span>
             ))}
