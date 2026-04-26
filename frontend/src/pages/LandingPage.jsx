@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Copy, Check, ChevronDown } from 'lucide-react';
 import FlappyWienerGame from '../components/FlappyWienerGame';
 import WienerLeaderboard from '../components/WienerLeaderboard';
+import HotdogQuiz from '../components/HotdogQuiz';
 
 const LandingPage = () => {
   const [copied, setCopied] = useState(false);
@@ -192,6 +193,9 @@ const LandingPage = () => {
 
         {/* Flappy Wiener Game */}
         <FlappyWienerGame />
+
+        {/* Am I a Hotdog Quiz */}
+        <HotdogQuiz />
 
         {/* Tokenomics & Holders */}
         <WienerLeaderboard />
