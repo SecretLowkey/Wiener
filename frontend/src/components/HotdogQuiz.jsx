@@ -167,7 +167,7 @@ export default function HotdogQuiz() {
 
   const shareOnX = (title, tag) => {
     const text = `i got "${title}" (${tag}) on the am i a hotdog quiz.\n\nfind out if you're a hotdog:`;
-    const url = window.location.href;
+    const url = 'http://justahotdog.fun';
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       text
     )}&url=${encodeURIComponent(url)}`;
